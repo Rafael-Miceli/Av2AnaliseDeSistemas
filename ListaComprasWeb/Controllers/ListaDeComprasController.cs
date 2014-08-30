@@ -3,11 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ListaCompras.Domain.Interfaces;
+using ListaCompras.Domain.Model;
+using ListaComprasWeb.Models;
+using ListaDeCompras.Dal;
 
 namespace ListaComprasWeb.Controllers
 {
     public class ListaDeComprasController : Controller
     {
+        private readonly IListaDeProdutos _listaDeProdutos;
+
+        public ListaDeComprasController() : this(new ListaDeProdutos(ProdutoRepository.CreateProdutoRepositoryInstance()))
+        {
+            
+        }
+
+        public ListaDeComprasController(IListaDeProdutos listaDeProdutos)
+        {
+            _listaDeProdutos = listaDeProdutos;
+        }
+
         //
         // GET: /ListaDeCompras/
 
@@ -16,9 +32,14 @@ namespace ListaComprasWeb.Controllers
             return View(RetorneListaDeCompras());
         }
 
-        private IView RetorneListaDeCompras()
+
+        //O Correto seria está área permanecer em um project de Mapeamentp
+        private ProdutoItemViewModel RetorneListaDeCompras()
         {
-            throw new NotImplementedException();
+            return new ProdutoItemViewModel
+            {
+                ItemDeProdutos = _listaDeProdutos.MontarListaDeCompras()
+            };
         }
 
     }

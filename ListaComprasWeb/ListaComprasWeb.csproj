@@ -124,6 +124,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ListaDeComprasController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="DependencysIntializaer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,6 +226,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListaCompras.Domain\ListaCompras.Domain.csproj">
+      <Project>{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}</Project>
+      <Name>ListaCompras.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListaDeCompras.Dal\ListaCompras.Data.csproj">
+      <Project>{7220B691-11EE-48D9-817C-3AFDF9828F2C}</Project>
+      <Name>ListaCompras.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

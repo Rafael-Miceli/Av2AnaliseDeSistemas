@@ -1,0 +1,7 @@
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaCompras.Data.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.pdb

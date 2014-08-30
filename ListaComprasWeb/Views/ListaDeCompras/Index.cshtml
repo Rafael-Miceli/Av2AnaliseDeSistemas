@@ -1,12 +1,16 @@
-﻿@model IEnumerable<ListaComprasWeb.Models.ProdutoItemViewModel>
+﻿@model ListaComprasWeb.Models.ProdutoItemViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Lista de compras a fazer</h2>
 
-@foreach (var item in Model)
+@foreach (var item in Model.ItemDeProdutos)
 {
-    <span>item.Produto.Nome</span>    
+    <span>@item.Produto.Nome</span>    
+    
+    <span>@item.Quantidade</span>
+    
+    <span>@item.Validade</span>    
 }

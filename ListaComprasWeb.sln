@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaComprasWeb", "ListaComprasWeb\ListaComprasWeb.csproj", "{D3B56F37-7D17-436C-B89D-987316AC6BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaCompras.Data", "ListaDeCompras.Dal\ListaCompras.Data.csproj", "{7220B691-11EE-48D9-817C-3AFDF9828F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaCompras.Domain", "ListaCompras.Domain\ListaCompras.Domain.csproj", "{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{D3B56F37-7D17-436C-B89D-987316AC6BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B56F37-7D17-436C-B89D-987316AC6BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3B56F37-7D17-436C-B89D-987316AC6BAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7220B691-11EE-48D9-817C-3AFDF9828F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7220B691-11EE-48D9-817C-3AFDF9828F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7220B691-11EE-48D9-817C-3AFDF9828F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7220B691-11EE-48D9-817C-3AFDF9828F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
