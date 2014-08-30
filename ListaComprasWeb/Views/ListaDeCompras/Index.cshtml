@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ListaComprasWeb.Models.ProdutoItemViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in Model)
+{
+    <span>item.Produto.Nome</span>    
+}
