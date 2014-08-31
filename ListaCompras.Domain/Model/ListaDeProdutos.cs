@@ -10,23 +10,23 @@ namespace ListaCompras.Domain.Model
     public class ListaDeProdutos : IListaDeProdutos
     {
         private readonly IProdutoRepository _produtoRepository;
-        public  List<ItemDeProduto> ListaComProdutos { get; private set; }
+        private readonly IItemDeProdutoRepository _produtoItemRepository;
 
-        public ListaDeProdutos(IProdutoRepository produtoRepository)
+        public ListaDeProdutos(IProdutoRepository produtoRepository, IItemDeProdutoRepository produtoItemRepository)
         {
             _produtoRepository = produtoRepository;
-            ListaComProdutos = new List<ItemDeProduto>();
+            _produtoItemRepository = produtoItemRepository;
         }
 
         public void AdicionarNovoItem(ItemDeProduto itemDeProduto)
         {
             ValidadeEmItemDoProdutoNaoForValidaCriaDataAutomatica(itemDeProduto, 7);
-            ListaComProdutos.Add(itemDeProduto);
+            _produtoItemRepository.Adicionar(itemDeProduto);
         }
 
         public void AtualizarItem(ItemDeProduto itemDeProduto)
         {
-            var itemDeProdutoParaAtualizar = ListaComProdutos.Find(i => i.Id == itemDeProduto.Id);
+            var itemDeProdutoParaAtualizar = _produtoItemRepository.BuscarPorId(itemDeProduto.Id);
 
             itemDeProdutoParaAtualizar.Quantidade = itemDeProduto.Quantidade;
 
@@ -39,10 +39,10 @@ namespace ListaCompras.Domain.Model
 
         public void RemoverItem(int itemDeProdutoId)
         {
-            var itemDeProduto = ListaComProdutos.Find(i => i.Id == itemDeProdutoId);
+            var itemDeProduto = _produtoItemRepository.BuscarPorId(itemDeProdutoId);
 
             if (PodeRemoverItem(itemDeProduto))
-                ListaComProdutos.Remove(itemDeProduto);
+                _produtoItemRepository.Remover(itemDeProduto);
         }
 
         public List<ItemDeProduto> MontarListaDeCompras()
@@ -51,10 +51,10 @@ namespace ListaCompras.Domain.Model
 
             foreach (var produto in _produtoRepository.RetornarProdutos())
             {
-                var totalDeProdutosNaLista = ListaComProdutos.Count(i => i.Produto.Id == produto.Id);
+                var totalDeProdutosNaLista = _produtoItemRepository.Listar().Count(i => i.Produto.Id == produto.Id);
 
                 if (totalDeProdutosNaLista <= produto.QuantidadeMinima)
-                    listaDeCompras.AddRange(ListaComProdutos.Where(i => i.Produto.Id == produto.Id));
+                    listaDeCompras.AddRange(_produtoItemRepository.Listar().Where(i => i.Produto.Id == produto.Id));
                     
             }
 
@@ -66,12 +66,12 @@ namespace ListaCompras.Domain.Model
 
         private bool PodeRemoverItem(ItemDeProduto itemDeProduto)
         {
-            return ListaComProdutos.Any(i => i.Produto.Id == itemDeProduto.Produto.Id);
+            return _produtoItemRepository.Listar().Any(i => i.Produto.Id == itemDeProduto.Produto.Id);
         }
 
         private bool ValidadeEmItemDoProdutoForValida(ItemDeProduto itemDeProduto)
         {
-            var itemsDeProdutosDoProdutoTal = ListaComProdutos.Where(p => p.Produto.Id == itemDeProduto.Id);
+            var itemsDeProdutosDoProdutoTal = _produtoItemRepository.Listar().Where(p => p.Produto.Id == itemDeProduto.Id);
 
             if(!itemsDeProdutosDoProdutoTal.Any(i => i.Validade == itemDeProduto.Validade && i.Id != itemDeProduto.Id))
                 return true;
@@ -81,7 +81,7 @@ namespace ListaCompras.Domain.Model
 
         private void ValidadeEmItemDoProdutoNaoForValidaCriaDataAutomatica(ItemDeProduto itemDeProduto, double numeroDeDias)
         {
-            var itemsDeProdutosDoProdutoTal = ListaComProdutos.Where(p => p.Produto.Id == itemDeProduto.Id);
+            var itemsDeProdutosDoProdutoTal = _produtoItemRepository.Listar().Where(p => p.Produto.Id == itemDeProduto.Id);
 
             if (itemsDeProdutosDoProdutoTal.Any(i => i.Validade == itemDeProduto.Validade && i.Id != itemDeProduto.Id))
             {

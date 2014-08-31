@@ -28,3 +28,38 @@ c:\users\alunoinfnet\documents\visual studio 2012\Projects\ListaComprasWeb\Lista
 c:\users\alunoinfnet\documents\visual studio 2012\Projects\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.csprojResolveAssemblyReference.cache
 c:\users\alunoinfnet\documents\visual studio 2012\Projects\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.dll
 c:\users\alunoinfnet\documents\visual studio 2012\Projects\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaComprasWeb.dll.config
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaComprasWeb.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaComprasWeb.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\Antlr3.Runtime.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\EntityFramework.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaCompras.Domain.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\Newtonsoft.Json.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Http.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Mvc.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Optimization.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Providers.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Razor.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\WebGrease.dll
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaCompras.Domain.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\EntityFramework.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\Newtonsoft.Json.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Http.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Mvc.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.Razor.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaComprasWeb\obj\Debug\ListaComprasWeb.pdb

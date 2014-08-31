@@ -16,7 +16,7 @@ namespace ListaDeCompras.Dal
         private ProdutoRepository()
         {}
 
-        public static ProdutoRepository CreateProdutoRepositoryInstance()
+        public static ProdutoRepository Create()
         {
             if (_produtoRepositoryInstance == null)
                 return _produtoRepositoryInstance = new ProdutoRepository();

@@ -14,10 +14,8 @@ namespace ListaComprasWeb.Controllers
     {
         private readonly IListaDeProdutos _listaDeProdutos;
 
-        public ListaDeComprasController() : this(new ListaDeProdutos(ProdutoRepository.CreateProdutoRepositoryInstance()))
-        {
-            
-        }
+        public ListaDeComprasController() : this(new ListaDeProdutos(ProdutoRepository.Create(), ItemDeProdutoRepository.Create()))
+        {}
 
         public ListaDeComprasController(IListaDeProdutos listaDeProdutos)
         {
@@ -33,7 +31,7 @@ namespace ListaComprasWeb.Controllers
         }
 
 
-        //O Correto seria está área permanecer em um project de Mapeamentp
+        //O Correto seria está área permanecer em um project de Mapeamento
         private ProdutoItemViewModel RetorneListaDeCompras()
         {
             return new ProdutoItemViewModel
