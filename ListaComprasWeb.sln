@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaCompras.Data", "ListaD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaCompras.Domain", "ListaCompras.Domain\ListaCompras.Domain.csproj", "{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B272ABC7-10A5-40FF-A15C-C243CB30882A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaCompras.Domain.Tests", "ListaCompras.Domain.Tests\ListaCompras.Domain.Tests.csproj", "{B02E1647-F3F0-4C60-8945-0A9C9A6590CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2923546-CC47-4F13-8D85-5CF8C0D83E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02E1647-F3F0-4C60-8945-0A9C9A6590CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02E1647-F3F0-4C60-8945-0A9C9A6590CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02E1647-F3F0-4C60-8945-0A9C9A6590CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02E1647-F3F0-4C60-8945-0A9C9A6590CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B02E1647-F3F0-4C60-8945-0A9C9A6590CC} = {B272ABC7-10A5-40FF-A15C-C243CB30882A}
 	EndGlobalSection
 EndGlobal

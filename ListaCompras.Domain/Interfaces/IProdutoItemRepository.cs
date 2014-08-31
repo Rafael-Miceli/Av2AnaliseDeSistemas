@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using ListaCompras.Domain.Model;
 
-namespace ListaCompras.Domain.Model
+namespace ListaCompras.Domain.Interfaces
 {
     public interface IItemDeProdutoRepository
     {

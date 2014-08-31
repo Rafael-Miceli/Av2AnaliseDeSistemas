@@ -30,13 +30,24 @@ namespace ListaComprasWeb.Controllers
             return View(RetorneListaDeCompras());
         }
 
+        public ActionResult ListaDeProdutos()
+        {
+            return View(RetornarTodosOsProdutos());
+        }
+
+        private List<ItemDeProduto> RetornarTodosOsProdutos()
+        {
+            return _listaDeProdutos.RetornarTodosOsItems();
+        }
 
         //O Correto seria está área permanecer em um project de Mapeamento
         private ProdutoItemViewModel RetorneListaDeCompras()
         {
+            var produtosNome = _listaDeProdutos.MontarListaDeCompras().Select(p => p.Produto.Nome).Distinct().ToList();
+
             return new ProdutoItemViewModel
             {
-                ItemDeProdutos = _listaDeProdutos.MontarListaDeCompras()
+                ProdutoParaComprar = produtosNome
             };
         }
 

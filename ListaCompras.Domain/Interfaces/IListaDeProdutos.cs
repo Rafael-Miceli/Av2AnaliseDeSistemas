@@ -9,5 +9,6 @@ namespace ListaCompras.Domain.Interfaces
         void AtualizarItem(ItemDeProduto itemDeProduto);
         void RemoverItem(int itemDeProdutoId);
         List<ItemDeProduto> MontarListaDeCompras();
+        List<ItemDeProduto> RetornarTodosOsItems();
     }
 }

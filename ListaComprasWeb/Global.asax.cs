@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using ListaDeCompras.Dal;
 
 namespace ListaComprasWeb
 {
@@ -23,6 +24,11 @@ namespace ListaComprasWeb
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            var produtoRepository = ProdutoRepository.Create();
+            produtoRepository.CriarDummies();
+
+            var itemDeProdutoRepository = ItemDeProdutoRepository.Create();
+            itemDeProdutoRepository.CriarDummies(produtoRepository.RetornarProdutos());
 
         }
     }

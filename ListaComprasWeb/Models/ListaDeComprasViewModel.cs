@@ -8,7 +8,7 @@ namespace ListaComprasWeb.Models
 {
     public class ProdutoItemViewModel
     {
-        public List<ItemDeProduto> ItemDeProdutos { get; set; }
+        public List<string> ProdutoParaComprar { get; set; }
 
     }
 }

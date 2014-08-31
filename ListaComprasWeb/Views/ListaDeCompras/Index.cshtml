@@ -6,11 +6,9 @@
 
 <h2>Lista de compras a fazer</h2>
 
-@foreach (var item in Model.ItemDeProdutos)
+@foreach (var nome in Model.ProdutoParaComprar)
 {
-    <span>@item.Produto.Nome</span>    
+    <span>@nome</span>    
     
-    <span>@item.Quantidade</span>
-    
-    <span>@item.Validade</span>    
+    <br/>
 }

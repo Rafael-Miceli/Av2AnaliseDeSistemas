@@ -51,14 +51,19 @@ namespace ListaCompras.Domain.Model
 
             foreach (var produto in _produtoRepository.RetornarProdutos())
             {
-                var totalDeProdutosNaLista = _produtoItemRepository.Listar().Count(i => i.Produto.Id == produto.Id);
+                var totalDeProdutosNaLista = _produtoItemRepository.Listar().Where(i => i.Produto.Id == produto.Id).Sum(q => q.Quantidade);
 
-                if (totalDeProdutosNaLista <= produto.QuantidadeMinima)
+                if (totalDeProdutosNaLista < produto.QuantidadeMinima)
                     listaDeCompras.AddRange(_produtoItemRepository.Listar().Where(i => i.Produto.Id == produto.Id));
                     
             }
 
             return listaDeCompras;
+        }
+
+        public List<ItemDeProduto> RetornarTodosOsItems()
+        {
+            return _produtoItemRepository.Listar();
         }
 
 

@@ -5,3 +5,17 @@ C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\bin
 C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaCompras.Data.csprojResolveAssemblyReference.cache
 C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.dll
 C:\Users\Rafael\Downloads\ListaComprasWeb\ListaComprasWeb\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.dll
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.pdb
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\obj\Debug\ListaCompras.Data.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Documents\GitHub\Av2AnaliseDeSistemas\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\bin\Debug\ListaDeCompras.Dal.pdb
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.dll
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\bin\Debug\ListaCompras.Domain.pdb
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\obj\Debug\ListaCompras.Data.csprojResolveAssemblyReference.cache
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.dll
+C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaDeCompras.Dal\obj\Debug\ListaDeCompras.Dal.pdb

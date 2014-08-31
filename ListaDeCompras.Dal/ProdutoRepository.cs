@@ -32,8 +32,16 @@ namespace ListaDeCompras.Dal
 
         private void IncrementarId(Produto produto)
         {
-            var maiorId = _produtosEmMemoria.Max(p => p.Id);
-            produto.Id = maiorId + 1;
+            if (_produtosEmMemoria.Count == 0)
+            {
+                produto.Id = 1;
+            }
+            else
+            {
+                var maiorId = _produtosEmMemoria.Max(p => p.Id);
+                produto.Id = maiorId + 1;    
+            }
+            
         }
 
         public void AtualizarProduto(Produto produto)
@@ -52,6 +60,21 @@ namespace ListaDeCompras.Dal
         public List<Produto> RetornarProdutos()
         {
             return _produtosEmMemoria;
+        }
+
+        public void CriarDummies()
+        {
+            var papelHigienico = new Produto("Papel Higiênico", 3, "");
+            var arroz = new Produto("Arroz", 1, "Kg");
+            var feijao = new Produto("Feijão", 1, "Kg");
+            var batata = new Produto("Batata Inglesa", 2, "");
+            var alface = new Produto("Alface", 0, "");
+
+            AdicionarProduto(papelHigienico);
+            AdicionarProduto(arroz);
+            AdicionarProduto(feijao);
+            AdicionarProduto(batata);
+            AdicionarProduto(alface);
         }
     }
 }

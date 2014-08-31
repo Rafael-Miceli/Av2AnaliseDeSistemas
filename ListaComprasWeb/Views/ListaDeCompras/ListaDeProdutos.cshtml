@@ -1,0 +1,18 @@
+﻿@model List<ListaCompras.Domain.Model.ItemDeProduto>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Lista de produtos</h2>
+
+@foreach (var item in Model)
+{
+    <span>@item.Produto.Nome</span>
+
+    <span>@item.Quantidade</span>
+
+    <span>@item.Validade</span>
+
+    <br />
+}

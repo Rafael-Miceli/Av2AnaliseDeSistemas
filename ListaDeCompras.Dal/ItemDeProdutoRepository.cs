@@ -35,10 +35,18 @@ namespace ListaDeCompras.Dal
             _itemDeProdutosEmMemoria.Remove(itemDeProduto);
         }
 
-        private void IncrementarId(ItemDeProduto produto)
+        private void IncrementarId(ItemDeProduto itemDeProduto)
         {
-            var maiorId = _itemDeProdutosEmMemoria.Max(p => p.Id);
-            produto.Id = maiorId + 1;
+            if (_itemDeProdutosEmMemoria.Count == 0)
+            {
+                itemDeProduto.Id = 1;
+            }
+            else
+            {
+                var maiorId = _itemDeProdutosEmMemoria.Max(p => p.Id);
+                itemDeProduto.Id = maiorId + 1;    
+            }
+            
         }
 
         public ItemDeProduto BuscarPorId(int id)
@@ -49,6 +57,36 @@ namespace ListaDeCompras.Dal
         public List<ItemDeProduto> Listar()
         {
             return _itemDeProdutosEmMemoria;
+        }
+
+        public void CriarDummies(List<Produto> produtos)
+        {
+
+            var papelHigienico = produtos.Find(p => p.Id == 1);
+            var arroz = produtos.Find(p => p.Id == 2);
+            var feijao = produtos.Find(p => p.Id == 3);
+            var batata = produtos.Find(p => p.Id == 4);
+            var alface = produtos.Find(p => p.Id == 5);
+
+            var papelHigienicoItem1 = new ItemDeProduto(papelHigienico, 1, new DateTime(2014, 09, 15));
+            var papelHigienicoItem2 = new ItemDeProduto(papelHigienico, 1, new DateTime(2014, 09, 28));
+
+            var arrozItem1 = new ItemDeProduto(arroz, 0, new DateTime(2014, 09, 28));
+
+            var feijaoItem1 = new ItemDeProduto(feijao, 0, null);
+
+            var batataItem1 = new ItemDeProduto(batata, 1, new DateTime(2014, 09, 15));
+            var batataItem2 = new ItemDeProduto(batata, 2, new DateTime(2014, 09, 17));
+
+            var alfaceItem1 = new ItemDeProduto(alface, 0, new DateTime(2014, 09, 17));
+
+            Adicionar(papelHigienicoItem1);
+            Adicionar(papelHigienicoItem2);
+            Adicionar(arrozItem1);
+            Adicionar(feijaoItem1);
+            Adicionar(batataItem1);
+            Adicionar(batataItem2);
+            Adicionar(alfaceItem1);
         }
     }
 }

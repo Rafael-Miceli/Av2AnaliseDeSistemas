@@ -11,9 +11,9 @@ namespace ListaCompras.Domain.Model
         public int Id { get; set; }
         public Produto Produto { get; set; }
         public int Quantidade { get; set; }
-        public DateTime Validade { get; set; }
+        public DateTime? Validade { get; set; }
 
-        public ItemDeProduto(Produto produto, int quantidade, DateTime validade)
+        public ItemDeProduto(Produto produto, int quantidade, DateTime? validade)
         {
             Produto = produto;
             Quantidade = quantidade;

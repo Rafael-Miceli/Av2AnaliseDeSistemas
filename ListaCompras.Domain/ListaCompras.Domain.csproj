@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IProdutoRepository.cs" />
     <Compile Include="Interfaces\IListaDeProdutos.cs" />
-    <Compile Include="Model\IProdutoItemRepository.cs" />
+    <Compile Include="Interfaces\IProdutoItemRepository.cs" />
     <Compile Include="Model\ItemDeProduto.cs" />
     <Compile Include="Model\ListaDeProdutos.cs" />
     <Compile Include="Model\Produto.cs" />
