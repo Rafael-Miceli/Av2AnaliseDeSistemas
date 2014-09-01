@@ -27,7 +27,7 @@ namespace ListaComprasWeb.Controllers
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "ListaDeCompras");
             }
             catch
             {
