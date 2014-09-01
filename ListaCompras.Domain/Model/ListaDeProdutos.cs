@@ -18,7 +18,7 @@ namespace ListaCompras.Domain.Model
             _produtoItemRepository = produtoItemRepository;
         }
 
-        public void AdicionarNovoItem(ItemDeProduto itemDeProduto)
+        public void AdicionarItemComNovaValidade(ItemDeProduto itemDeProduto)
         {
             ValidadeEmItemDoProdutoNaoForValidaCriaDataAutomatica(itemDeProduto, 7);
             _produtoItemRepository.Adicionar(itemDeProduto);

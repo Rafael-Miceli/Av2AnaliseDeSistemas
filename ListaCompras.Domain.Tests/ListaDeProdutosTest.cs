@@ -54,9 +54,13 @@ namespace ListaCompras.Domain.Tests
         }
 
         [TestMethod]
-        public void Given_A_Valid_Product_When_Adding_To_Memory_Then_Add()
+        public void Given_A_Valid_Product_When_Adding_To_Memory_Then_Add_Also_The_ListaDeProdutos()
         {
-            
+            var produto = new Produto("Beterraba", 1, "Kg");
+            var produtoRepository = ProdutoRepository.Create();
+            produtoRepository.AdicionarProduto(produto);
+
+            Assert.IsTrue(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Nome == "Beterraba"));
         }
 
     }

@@ -133,3 +133,38 @@ C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaComprasWeb\bin\System.Web.WebP
 C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaComprasWeb\obj\Debug\ListaComprasWeb.csprojResolveAssemblyReference.cache
 C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaComprasWeb\obj\Debug\ListaComprasWeb.dll
 C:\Users\Rafael\Estudos\InfNet\Ciclo 6\teste\ListaComprasWeb\obj\Debug\ListaComprasWeb.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaComprasWeb.dll.config
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaComprasWeb.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaComprasWeb.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Antlr3.Runtime.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\EntityFramework.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaCompras.Domain.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaDeCompras.Dal.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Newtonsoft.Json.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Http.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Mvc.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Optimization.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Providers.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Razor.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\WebGrease.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaCompras.Domain.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\ListaDeCompras.Dal.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\EntityFramework.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Newtonsoft.Json.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Http.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Mvc.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.Razor.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.csprojResolveAssemblyReference.cache
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.pdb

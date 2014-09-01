@@ -16,7 +16,7 @@ namespace ListaComprasWeb
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "ListaDeCompras", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "ListaDeCompras", action = "ListaDeProdutos", id = UrlParameter.Optional }
             );
         }
     }

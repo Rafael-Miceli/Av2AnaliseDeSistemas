@@ -5,7 +5,7 @@ namespace ListaCompras.Domain.Interfaces
 {
     public interface IListaDeProdutos
     {
-        void AdicionarNovoItem(ItemDeProduto itemDeProduto);
+        void AdicionarItemComNovaValidade(ItemDeProduto itemDeProduto);
         void AtualizarItem(ItemDeProduto itemDeProduto);
         void RemoverItem(int itemDeProdutoId);
         List<ItemDeProduto> MontarListaDeCompras();

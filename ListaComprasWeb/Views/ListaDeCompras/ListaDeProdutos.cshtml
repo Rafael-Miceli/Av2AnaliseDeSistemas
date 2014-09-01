@@ -1,18 +1,37 @@
 ﻿@model List<ListaCompras.Domain.Model.ItemDeProduto>
 
-@{
-    ViewBag.Title = "title";
-}
+
+@Html.ActionLink("Cadastrar novos produtos", "Create", "Produto")
+
+@Html.ActionLink("Lista de compras a fazer", "Index", "ListaDeCompras")
+
 
 <h2>Lista de produtos</h2>
 
-@foreach (var item in Model)
-{
-    <span>@item.Produto.Nome</span>
+<table>
+    <thead>
+        <tr>
+            <th>
+                Produto
+            </th>
+            <th>
+                Quantidade
+            </th>
+            <th>
+                Validade
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Produto.Nome</td>
 
-    <span>@item.Quantidade</span>
+                <td>@item.Quantidade</td>
 
-    <span>@item.Validade</span>
-
-    <br />
-}
+                <td>@item.Validade</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
+@Html.ActionLink("Voltar", "ListaDeProdutos")
+
 <h2>Lista de compras a fazer</h2>
 
 @foreach (var nome in Model.ProdutoParaComprar)
 {
-    <span>@nome</span>    
+    <h3>@nome</h3>    
     
     <br/>
 }
