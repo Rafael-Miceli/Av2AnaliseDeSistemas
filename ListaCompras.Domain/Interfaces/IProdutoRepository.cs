@@ -9,5 +9,6 @@ namespace ListaCompras.Domain.Interfaces
         void AtualizarProduto(Produto produto);
         Produto RetornaProdutoPorId(int id);
         List<Produto> RetornarProdutos();
+        void Remover(Produto produto);
     }
 }

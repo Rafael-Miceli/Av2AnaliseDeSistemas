@@ -56,13 +56,30 @@ namespace ListaCompras.Domain.Tests
         [TestMethod]
         public void Given_A_Valid_Product_When_Adding_To_Memory_Then_Add_Also_The_ListaDeProdutos()
         {
-            var produto = new Produto("Beterraba", 1, "Kg");
             var produtoRepository = ProdutoRepository.Create();
             var itemDeProdutorepository = ItemDeProdutoRepository.Create();
-            
-            produto.Criar(produtoRepository, itemDeProdutorepository);
+
+            var produto = new Produto("Beterraba", 1, "Kg");
+            ProdutoServiceTemplate produtoService = new ProdutoService(produtoRepository, itemDeProdutorepository);
+
+            produtoService.Criar(produto);
 
             Assert.IsTrue(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Nome == "Beterraba"));
+        }
+
+        [TestMethod]
+        [Ignore]
+        public void Given_A_Call_To_Delete_A_Product_When_Delete_The_Product_Then_Delete_It_Also_From_The_listaDeProdutos()
+        {
+            var produtoRepository = ProdutoRepository.Create();
+            var itemDeProdutorepository = ItemDeProdutoRepository.Create();
+            var produto = Produto.CarregarProduto(4, ProdutoRepository.Create());
+            
+            ProdutoServiceTemplate produtoService = new ProdutoService(produtoRepository, itemDeProdutorepository);
+
+            produtoService.Deletar(produto);
+
+            Assert.IsFalse(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Id == 4));
         }
 
     }

@@ -68,7 +68,6 @@ namespace ListaCompras.Domain.Model
 
 
 
-
         private bool PodeRemoverItem(ItemDeProduto itemDeProduto)
         {
             return _produtoItemRepository.Listar().Any(i => i.Produto.Id == itemDeProduto.Produto.Id);

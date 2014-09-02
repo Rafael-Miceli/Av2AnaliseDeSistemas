@@ -62,6 +62,11 @@ namespace ListaDeCompras.Dal
             return _produtosEmMemoria;
         }
 
+        public void Remover(Produto produto)
+        {
+            _produtosEmMemoria.Remove(produto);
+        }
+
         public void CriarDummies()
         {
             var papelHigienico = new Produto("Papel Higiênico", 3, "");
