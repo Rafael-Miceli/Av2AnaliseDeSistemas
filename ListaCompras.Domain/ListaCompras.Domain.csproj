@@ -45,6 +45,8 @@
     <Compile Include="Model\ItemDeProduto.cs" />
     <Compile Include="Model\ListaDeProdutos.cs" />
     <Compile Include="Model\Produto.cs" />
+    <Compile Include="Service\ProdutoService.cs" />
+    <Compile Include="Service\ProdutoServiceTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

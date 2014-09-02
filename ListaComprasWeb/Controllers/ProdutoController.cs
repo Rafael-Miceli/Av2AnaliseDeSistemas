@@ -1,14 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ListaCompras.Domain.Interfaces;
+using ListaCompras.Domain.Model;
+using ListaCompras.Domain.Service;
+using ListaDeCompras.Dal;
 
 namespace ListaComprasWeb.Controllers
 {
     public class ProdutoController : Controller
     {
-       
+        private readonly IProdutoRepository _produtoRepository;
+        private readonly IItemDeProdutoRepository _itemDeProdutoRepository;
+
+        public ProdutoController() : this(ProdutoRepository.Create(), ItemDeProdutoRepository.Create())
+        {}
+
+        public ProdutoController(IProdutoRepository produtoRepository, IItemDeProdutoRepository itemDeProdutoRepository)
+        {
+            _produtoRepository = produtoRepository;
+            _itemDeProdutoRepository = itemDeProdutoRepository;
+        }
+
         //
         // GET: /Produto/Create
 
@@ -21,11 +32,13 @@ namespace ListaComprasWeb.Controllers
         // POST: /Produto/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Produto produtoForm)
         {
             try
             {
-                // TODO: Add insert logic here
+                var produto = new Produto(produtoForm.Nome, produtoForm.QuantidadeMinima, produtoForm.Unidade);
+                ProdutoServiceTemplate produtoService = new ProdutoService(_produtoRepository, _itemDeProdutoRepository);
+                produtoService.Criar(produto);
 
                 return RedirectToAction("Index", "ListaDeCompras");
             }

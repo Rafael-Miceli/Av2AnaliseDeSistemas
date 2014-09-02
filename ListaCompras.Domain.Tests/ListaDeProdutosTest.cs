@@ -2,6 +2,7 @@
 using System.Linq;
 using ListaCompras.Domain.Interfaces;
 using ListaCompras.Domain.Model;
+using ListaCompras.Domain.Service;
 using ListaDeCompras.Dal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -22,26 +23,6 @@ namespace ListaCompras.Domain.Tests
             itemDeProdutoRepository.CriarDummies(produtoRepository.RetornarProdutos());
 
             _listaDeProdutos = new ListaDeProdutos(ProdutoRepository.Create(), ItemDeProdutoRepository.Create());
-        }
-
-        [TestMethod]
-        [Ignore]
-        public void Given_A_Product_When_Adding_The_First_Item_Then_Create_Id_1()
-        {
-            var produtoRepository = ProdutoRepository.Create();
-            produtoRepository.CriarDummies();
-
-            Assert.AreEqual(1, produtoRepository.RetornarProdutos().Find(p => p.Id == 1).Id);
-        }
-
-        [TestMethod]
-        [Ignore]
-        public void Given_A_ItemDeProduto_When_Adding_The_First_Item_Then_Create_Id_1()
-        {
-            var produtoRepository = ItemDeProdutoRepository.Create();
-            produtoRepository.CriarDummies(ProdutoRepository.Create().RetornarProdutos());
-
-            Assert.AreEqual(1, produtoRepository.Listar().Find(p => p.Id == 1).Id);
         }
 
         [TestMethod]
@@ -68,18 +49,22 @@ namespace ListaCompras.Domain.Tests
         }
 
         [TestMethod]
-        [Ignore]
-        public void Given_A_Call_To_Delete_A_Product_When_Delete_The_Product_Then_Delete_It_Also_From_The_listaDeProdutos()
+        public void Given_A_Valid_Product_When_Adding_To_Memory_Then_Add_Also_The_ListaDeProdutos_And_Given_A_Call_To_Delete_A_Product_When_Delete_The_Product_Then_Delete_It_Also_From_The_listaDeProdutos()
         {
             var produtoRepository = ProdutoRepository.Create();
             var itemDeProdutorepository = ItemDeProdutoRepository.Create();
-            var produto = Produto.CarregarProduto(4, ProdutoRepository.Create());
-            
+            var produtoParaDeletar = Produto.CarregarProduto(5, ProdutoRepository.Create());
+            var produto = new Produto("Beterraba", 1, "Kg");
+
             ProdutoServiceTemplate produtoService = new ProdutoService(produtoRepository, itemDeProdutorepository);
 
-            produtoService.Deletar(produto);
+            produtoService.Deletar(produtoParaDeletar);
 
-            Assert.IsFalse(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Id == 4));
+            Assert.IsFalse(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Id == 5));
+
+            produtoService.Criar(produto);
+
+            Assert.IsTrue(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Nome == "Beterraba"));
         }
 
     }
