@@ -58,7 +58,9 @@ namespace ListaCompras.Domain.Tests
         {
             var produto = new Produto("Beterraba", 1, "Kg");
             var produtoRepository = ProdutoRepository.Create();
-            produtoRepository.AdicionarProduto(produto);
+            var itemDeProdutorepository = ItemDeProdutoRepository.Create();
+            
+            produto.Criar(produtoRepository, itemDeProdutorepository);
 
             Assert.IsTrue(_listaDeProdutos.RetornarTodosOsItems().Any(i => i.Produto.Nome == "Beterraba"));
         }

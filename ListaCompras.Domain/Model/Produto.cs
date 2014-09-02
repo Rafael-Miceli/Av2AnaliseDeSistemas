@@ -1,4 +1,5 @@
 ﻿using System;
+using ListaCompras.Domain.Interfaces;
 
 namespace ListaCompras.Domain.Model
 {
@@ -14,6 +15,13 @@ namespace ListaCompras.Domain.Model
             Nome = nome;
             QuantidadeMinima = quantidadeMinima;
             Unidade = unidade;
+        }
+
+        public void Criar(IProdutoRepository produtoRepository, IItemDeProdutoRepository itemDeProdutoRepository)
+        {
+            produtoRepository.AdicionarProduto(this);
+            var itemDeProduto = new ItemDeProduto(this, 0, null);
+            itemDeProdutoRepository.Adicionar(itemDeProduto);
         }
     }
 }
