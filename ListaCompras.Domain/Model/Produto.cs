@@ -10,6 +10,9 @@ namespace ListaCompras.Domain.Model
         public int QuantidadeMinima { get; set; }
         public string Unidade { get; set; }
 
+        public Produto()
+        {}
+
         public Produto(string nome, int quantidadeMinima, string unidade)
         {
             Nome = nome;

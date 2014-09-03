@@ -13,10 +13,7 @@ namespace ListaComprasWeb.Controllers
     public class ListaDeComprasController : Controller
     {
         private readonly IListaDeProdutos _listaDeProdutos;
-
-        public ListaDeComprasController() : this(new ListaDeProdutos(ProdutoRepository.Create(), ItemDeProdutoRepository.Create()))
-        {}
-
+        
         public ListaDeComprasController(IListaDeProdutos listaDeProdutos)
         {
             _listaDeProdutos = listaDeProdutos;

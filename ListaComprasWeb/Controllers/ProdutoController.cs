@@ -11,8 +11,6 @@ namespace ListaComprasWeb.Controllers
         private readonly IProdutoRepository _produtoRepository;
         private readonly IItemDeProdutoRepository _itemDeProdutoRepository;
 
-        public ProdutoController() : this(ProdutoRepository.Create(), ItemDeProdutoRepository.Create())
-        {}
 
         public ProdutoController(IProdutoRepository produtoRepository, IItemDeProdutoRepository itemDeProdutoRepository)
         {

@@ -17,3 +17,4 @@ C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaCompras.Domain
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaCompras.Domain\bin\Debug\ListaCompras.Domain.pdb
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaCompras.Domain\obj\Debug\ListaCompras.Domain.dll
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaCompras.Domain\obj\Debug\ListaCompras.Domain.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaCompras.Domain\obj\Debug\ListaCompras.Domain.csprojResolveAssemblyReference.cache

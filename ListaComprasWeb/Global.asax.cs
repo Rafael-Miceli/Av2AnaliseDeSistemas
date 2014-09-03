@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using ListaDeCompras.Dal;
+using Microsoft.Practices.Unity;
 
 namespace ListaComprasWeb
 {
@@ -30,6 +31,8 @@ namespace ListaComprasWeb
             var itemDeProdutoRepository = ItemDeProdutoRepository.Create();
             itemDeProdutoRepository.CriarDummies(produtoRepository.RetornarProdutos());
 
+            var unityControllerFactory = new UnityControllerFactory(new UnityContainer());
+            ControllerBuilder.Current.SetControllerFactory(unityControllerFactory);
         }
     }
 }

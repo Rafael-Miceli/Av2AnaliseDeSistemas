@@ -9,7 +9,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
+    
 
     <div class="form-horizontal">
         <h4>Produto</h4>
@@ -21,7 +21,6 @@
             @Html.LabelFor(model => model.Nome)
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Nome)
-                @Html.ValidationMessageFor(model => model.Nome)
             </div>
         </div>
 
@@ -29,7 +28,6 @@
             @Html.LabelFor(model => model.Unidade)
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Unidade)
-                @Html.ValidationMessageFor(model => model.Unidade)
             </div>
         </div>
 
@@ -37,7 +35,6 @@
             @Html.LabelFor(model => model.QuantidadeMinima)
             <div class="col-md-10">
                 @Html.EditorFor(model => model.QuantidadeMinima)
-                @Html.ValidationMessageFor(model => model.QuantidadeMinima)
             </div>
         </div>
 

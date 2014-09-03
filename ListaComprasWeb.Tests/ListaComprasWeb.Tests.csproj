@@ -90,6 +90,10 @@
       <Project>{D3B56F37-7D17-436C-B89D-987316AC6BAF}</Project>
       <Name>ListaComprasWeb</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ListaDeCompras.Dal\ListaCompras.Data.csproj">
+      <Project>{7220B691-11EE-48D9-817C-3AFDF9828F2C}</Project>
+      <Name>ListaCompras.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

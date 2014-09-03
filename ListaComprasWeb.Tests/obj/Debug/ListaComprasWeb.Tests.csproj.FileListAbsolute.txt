@@ -33,3 +33,5 @@ C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tes
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tests\obj\Debug\ListaComprasWeb.Tests.csprojResolveAssemblyReference.cache
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tests\obj\Debug\ListaComprasWeb.Tests.dll
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tests\obj\Debug\ListaComprasWeb.Tests.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb.Tests\bin\Debug\Microsoft.Practices.Unity.xml

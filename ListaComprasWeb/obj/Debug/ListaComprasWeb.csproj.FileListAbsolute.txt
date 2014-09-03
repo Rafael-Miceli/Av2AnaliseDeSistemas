@@ -168,3 +168,9 @@ C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.csprojResolveAssemblyReference.cache
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.dll
 C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\obj\Debug\ListaComprasWeb.pdb
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\rafael.miceli\Documents\GitHub\Av2AnaliseDeSistemas\ListaComprasWeb\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
