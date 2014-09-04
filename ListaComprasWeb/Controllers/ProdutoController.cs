@@ -9,13 +9,13 @@ namespace ListaComprasWeb.Controllers
     public class ProdutoController : Controller
     {
         private readonly IProdutoRepository _produtoRepository;
-        private readonly IItemDeProdutoRepository _itemDeProdutoRepository;
+        private readonly ProdutoServiceTemplate _produtoServiceTemplate;
 
 
-        public ProdutoController(IProdutoRepository produtoRepository, IItemDeProdutoRepository itemDeProdutoRepository)
+        public ProdutoController(IProdutoRepository produtoRepository, ProdutoServiceTemplate produtoServiceTemplate)
         {
             _produtoRepository = produtoRepository;
-            _itemDeProdutoRepository = itemDeProdutoRepository;
+            _produtoServiceTemplate = produtoServiceTemplate;
         }
 
         //
@@ -35,8 +35,7 @@ namespace ListaComprasWeb.Controllers
             try
             {
                 var produto = new Produto(produtoForm.Nome, produtoForm.QuantidadeMinima, produtoForm.Unidade);
-                ProdutoServiceTemplate produtoService = new ProdutoService(_produtoRepository, _itemDeProdutoRepository);
-                produtoService.Criar(produto);
+                _produtoServiceTemplate.Criar(produto);
 
                 return RedirectToAction("Index", "ListaDeCompras");
             }
@@ -51,20 +50,23 @@ namespace ListaComprasWeb.Controllers
 
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(Produto.CarregarProduto(id, _produtoRepository));
         }
 
         //
         // POST: /Produto/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Produto produto, string submitButton)
         {
             try
             {
-                // TODO: Add update logic here
+                if (submitButton == "Deletar")
+                    DeletarProduto(produto);
+                else
+                    EditarProduto(produto);
 
-                return RedirectToAction("Create");
+                return RedirectToAction("ListaDeProdutos", "ListaDeCompras");
             }
             catch
             {
@@ -72,29 +74,14 @@ namespace ListaComprasWeb.Controllers
             }
         }
 
-        //
-        // GET: /Produto/Delete/5
-
-        public ActionResult Delete(int id)
+        private void DeletarProduto(Produto produto)
         {
-            return View();
+            _produtoServiceTemplate.Deletar(produto);
         }
 
-        //
-        // POST: /Produto/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        private void EditarProduto(Produto produto)
         {
-            try
-            {
-                // TODO: Add delete logic here
-                return RedirectToAction("Create");
-            }
-            catch
-            {
-                return View();
-            }
+            _produtoServiceTemplate.Editar(produto);
         }
     }
 }

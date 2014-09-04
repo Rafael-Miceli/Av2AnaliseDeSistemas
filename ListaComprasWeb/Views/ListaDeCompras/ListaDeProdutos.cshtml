@@ -11,6 +11,7 @@
 <table>
     <thead>
         <tr>
+            <th></th>
             <th>
                 Produto
             </th>
@@ -20,18 +21,47 @@
             <th>
                 Validade
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
+        @{int novoId, antigoId = 0;}
+
         @foreach (var item in Model)
+{
+    novoId = item.Produto.Id;
+
+    <tr id="@item.Id">
+        <td data-id="@item.Produto.Id">+</td>
+
+        <td>@Html.ActionLink(@item.Produto.Nome, "Edit", "Produto", new { id = item.Produto.Id }, null)</td>
+
+        <td>@Html.EditorFor(model => @item.Quantidade)</td>
+
+        <td>@Html.EditorFor(model => @item.Validade)</td>
+
+        @if (novoId == antigoId)
         {
-            <tr>
-                <td>@item.Produto.Nome</td>
-
-                <td>@item.Quantidade</td>
-
-                <td>@item.Validade</td>
-            </tr>
+            <td id="deletar" data-produto-id="@item.Produto.Id" data-id="@item.Id">x</td>
         }
+        else
+        {
+            <td></td>
+        }
+
+
+    </tr>
+
+        antigoId = novoId;
+}
     </tbody>
 </table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    var btnDeletar = $('#deletar');
+    btnDeletar.click(alert('clicado'));
+</script>

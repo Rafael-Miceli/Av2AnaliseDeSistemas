@@ -1,4 +1,5 @@
 ﻿using System;
+using ListaCompras.Domain.Service;
 using ListaComprasWeb.Controllers;
 using ListaDeCompras.Dal;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -14,7 +15,7 @@ namespace ListaComprasWeb.Tests
         {
             var produto = new Produto("Beterraba", 1, "");
 
-            var produtoController = new ProdutoController(ProdutoRepository.Create(), ItemDeProdutoRepository.Create());
+            var produtoController = new ProdutoController(ProdutoRepository.Create(), new ProdutoService(ProdutoRepository.Create(), ItemDeProdutoRepository.Create()));
 
             var resultado = produtoController.Create(produto);
 

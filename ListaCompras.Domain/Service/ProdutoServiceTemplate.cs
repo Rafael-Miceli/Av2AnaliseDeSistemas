@@ -26,6 +26,11 @@ namespace ListaCompras.Domain.Service
             DeletarProduto(produto);
         }
 
+        public void Editar(Produto produto)
+        {
+            ProdutoRepository.AtualizarProduto(produto);
+        }
+
 
         protected abstract void DeletarProdutoNaLista(Produto produto);
 
