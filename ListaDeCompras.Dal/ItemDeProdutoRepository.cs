@@ -24,10 +24,11 @@ namespace ListaDeCompras.Dal
             return _itemDeProdutoRepositoryInstance;
         }
 
-        public void Adicionar(ItemDeProduto itemDeProduto)
+        public int Adicionar(ItemDeProduto itemDeProduto)
         {
-            IncrementarId(itemDeProduto);
+            var itemDeProdutoId = IncrementarId(itemDeProduto);
             _itemDeProdutosEmMemoria.Add(itemDeProduto);
+            return itemDeProdutoId;
         }
 
         public void Remover(ItemDeProduto itemDeProduto)
@@ -35,16 +36,18 @@ namespace ListaDeCompras.Dal
             _itemDeProdutosEmMemoria.Remove(itemDeProduto);
         }
 
-        private void IncrementarId(ItemDeProduto itemDeProduto)
+        private int IncrementarId(ItemDeProduto itemDeProduto)
         {
             if (_itemDeProdutosEmMemoria.Count == 0)
             {
                 itemDeProduto.Id = 1;
+                return 1;
             }
             else
             {
                 var maiorId = _itemDeProdutosEmMemoria.Max(p => p.Id);
-                itemDeProduto.Id = maiorId + 1;    
+                itemDeProduto.Id = maiorId + 1;
+                return maiorId + 1;
             }
             
         }

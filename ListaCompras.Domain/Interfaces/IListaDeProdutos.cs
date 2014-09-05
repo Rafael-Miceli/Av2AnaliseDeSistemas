@@ -10,5 +10,6 @@ namespace ListaCompras.Domain.Interfaces
         void RemoverItem(int itemDeProdutoId);
         List<ItemDeProduto> MontarListaDeCompras();
         List<ItemDeProduto> RetornarTodosOsItems();
+        int AdcionarItem(int produtoId);
     }
 }

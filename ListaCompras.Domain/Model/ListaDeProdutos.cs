@@ -18,6 +18,14 @@ namespace ListaCompras.Domain.Model
             _produtoItemRepository = produtoItemRepository;
         }
 
+        public int AdcionarItem(int produtoId)
+        {
+            var produto = _produtoRepository.RetornaProdutoPorId(produtoId);
+            var itemDeProduto = new ItemDeProduto(produto, 1, null);
+            return _produtoItemRepository.Adicionar(itemDeProduto);
+            
+        }
+
         public void AdicionarItemComNovaValidade(ItemDeProduto itemDeProduto)
         {
             ValidadeEmItemDoProdutoNaoForValidaCriaDataAutomatica(itemDeProduto, 7);

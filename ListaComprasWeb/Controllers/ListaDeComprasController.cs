@@ -34,7 +34,7 @@ namespace ListaComprasWeb.Controllers
 
         private List<ItemDeProduto> RetornarTodosOsProdutos()
         {
-            return _listaDeProdutos.RetornarTodosOsItems();
+            return _listaDeProdutos.RetornarTodosOsItems().OrderBy(p => p.Produto.Nome).ToList();
         }
 
         //O Correto seria está área permanecer em um project de Mapeamento

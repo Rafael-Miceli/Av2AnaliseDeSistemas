@@ -2,6 +2,7 @@
 
 
 @Html.ActionLink("Cadastrar novos produtos", "Create", "Produto")
+<br/>
 
 @Html.ActionLink("Lista de compras a fazer", "Index", "ListaDeCompras")
 
@@ -31,8 +32,10 @@
 {
     novoId = item.Produto.Id;
 
-    <tr id="@item.Id">
-        <td data-id="@item.Produto.Id">+</td>
+    <tr data-id="@item.Id">
+        <td>
+            <input name="btnAdicionar" type="button" value="+" data-id="@item.Id" data-produtoid="@item.Produto.Id" data-produtonome="@item.Produto.Nome" />
+        </td>
 
         <td>@Html.ActionLink(@item.Produto.Nome, "Edit", "Produto", new { id = item.Produto.Id }, null)</td>
 
@@ -42,7 +45,9 @@
 
         @if (novoId == antigoId)
         {
-            <td id="deletar" data-produto-id="@item.Produto.Id" data-id="@item.Id">x</td>
+            <td>
+                <input name="btnExcluir" type="button" value="X" data-id="@item.Id" data-produtoid="@item.Produto.Id" />
+            </td>
         }
         else
         {
@@ -59,9 +64,60 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $("input[name='btnExcluir']").click(function () {
+
+            var id = $(this).data("id");
+            var produtoId = $(this).data("produtoid");
+
+            var deleteItemDeProdutoCall = {
+                url: '/api/ListaDeProdutos/Delete?itemDeProdutoId=' + id + '&produtoId=' + produtoId,
+                type: 'DELETE',
+                datatype: 'json'
+            };
+
+            $.ajax(deleteItemDeProdutoCall).then(function () {
+                $("tr[data-id='" + id + "']").remove();
+            });
+        });
+
+        $("input[name='btnAdicionar']").click(function () {
+
+            var id = $(this).data("id");
+            var produtoId = $(this).data("produtoid");
+            var produtoNome = $(this).data("produtonome");
+
+            var addItemDeProdutoCall = {
+                url: '/api/ListaDeProdutos/AdicionarItemDeProduto?produtoId=' + produtoId,
+                type: 'POST',
+                datatype: 'json'
+            };
+
+            $.ajax(addItemDeProdutoCall).then(function (data) {
+                $("tr[data-id='" + id + "']").after(
+                    '<td> <input name="btnAdicionar" type="button" value="+" data-produtoid="'+ produtoId +'"> </td> ' +
+                    '<td><a href="/Produto/Edit/'+produtoId+'">'+produtoNome+'</a></td>' +
+                    '<td><input class="text-box single-line" data-val="true" data-val-number="The field Quantidade must be a number." data-val-required="The Quantidade field is required." id="item_Quantidade" name="item.Quantidade" type="number" value="1"></td>' +
+                    '<td><input class="text-box single-line" data-val="true" data-val-date="The field Validade must be a date." id="item_Validade" name="item.Validade" type="datetime" value=""></td>' +
+                    '<td><input name="btnExcluir" type="button" value="X" data-id="' + data + '" data-produtoid="' + produtoId + '" /></td>');
+            });
+
+            $("input[name='btnExcluir']").click(function () {
+
+                var deleteItemDeProdutoCall = {
+                    url: '/api/ListaDeProdutos/Delete?itemDeProdutoId=' + data + '&produtoId=' + produtoId,
+                    type: 'DELETE',
+                    datatype: 'json'
+                };
+
+                $.ajax(deleteItemDeProdutoCall).then(function () {
+                    $("tr[data-id='" + data + "']").remove();
+                });
+            });
+
+        });
+
+</script>
 }
 
-<script type="text/javascript">
-    var btnDeletar = $('#deletar');
-    btnDeletar.click(alert('clicado'));
-</script>
